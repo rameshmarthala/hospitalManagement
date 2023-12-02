@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>block chain</title>
+	<!--
+    Template 2105 Input
+	http://www.tooplate.com/view/2105-input
+	-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/materialize.min.css">
+    <link rel="stylesheet" href="static/css/tooplate.css">
+      <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+ <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
+ <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
+</head>
+
+<body id="survey" class="font-weight-light">
+    <div class="container tm-container-max-800">
+        <div class="row">
+            <div class="col-12">
+                <header class="mt-5 mb-5 text-center">
+                     <center>	<div class="col-md-8">
+
+		{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+				{% for category, message in messages %}
+				<b><h6><div class="alert alert-{{ category }}">
+						{{ message }}{{msg}}
+					</div></h6></b>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+
+		{% block content %} {% endblock %}
+
+
+     </div></center>
+                    <h1 class="font-weight-light tm-form-title">Doctor Login Page</h1>
+                     <p class="grey-text" style="background-image: url('static/img/d2.jpg'); background-size: cover; height: 400px; " >
+                       </p>
+                   </p>
+                    <br>
+                     <center style=" width: 241px; width: 720px;">      <a href="{{url_for('index')}}" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">Home Page</a>
+          </center>
+                </header>
+
+
+                    <div class="tm-bg-black tm-form-block">
+                        <div class="row mb-4">
+                            <div class="col-xl-6">
+                                <form action="{{url_for('logback')}}" method="post">
+
+                                  <div class="input-field">
+                                    <input placeholder="Your Email" name="email" id="email" type="text" class="validate">
+
+                                </div>
+
+                            </div>
+                            <div class="col-xl-6">
+
+                                <div class="input-field">
+                                    <input placeholder="Password" name="pwd" id="pwd" type="password" class="validate">
+                                </div>
+
+                        </div>
+<!--                        <div class="row">-->
+<!--                            <div class="col-xl-12">-->
+<!--                                <textarea class="p-3" name="message" id="message" cols="30" rows="3" placeholder="Additional Message...(optional)"></textarea>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+                    <div class="text-center mt-5">
+                        <button type="submit" class="waves-effect btn-large">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--    <a href="{{url_for('index')}}">Go Back</a>-->
+                    </div>
+                    <br><br>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="static/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="static/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>

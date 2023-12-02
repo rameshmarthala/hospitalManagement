@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>block chain</title>
+	<!--
+    Template 2105 Input
+	http://www.tooplate.com/view/2105-input
+	-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/materialize.min.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/tooplate.css')}}" />
+     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+ <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
+ <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
+</head>
+
+<body id="survey" class="font-weight-light">
+    <div class="container tm-container-max-800">
+        <div class="row">
+            <div class="col-12">
+                <header class="mt-5 mb-5 text-center">
+<!--                    <h1 class="font-weight-light tm-form-title">Slot Booking Page</h1>-->
+
+                    <br><br><br><br><br><br>
+
+                </header>
+
+
+                    <div class="tm-bg-black tm-form-block">
+                        <div class="row mb-4">
+                            <div class="col-xl-6">
+<!--                                <form action="{{url_for('bookslotback')}}" method="post">-->
+                <form action="{{url_for('reportback')}}" method="post">
+                    <h5 style="color:pink;width: 609px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;View uploade file Information</h5>
+                    <div class="mb-2">
+                    <div class="input-field">
+                        <input name="id" type="hidden" class="validate" value="{{ s1 }}" readonly>
+                    </div>
+                    <div class="input-field" style="width:400px;">
+                        <input name="hash1" type="hidden" class="validate" value="{{ s2 }}" readonly>
+                    </div>
+                     <div class="input-field" style="width:400px;">
+                        <input name="hash2" type="hidden" class="validate" value="{{ s3 }}"  readonly>
+                    </div>
+<br><br>
+                    <div class="text-right mt-4" style=" width: 272px;">
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="submit" class="waves-effect btn-large btn-large-white px-4 black-text;background-color:pink" >View Information</button>
+
+                      <center style="width: 805px; height:50px; !important"> <a href="{{url_for('upload')}}" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">Prevous Page...</a>
+                 </center>
+ </div></div><br><br>
+<!--                    <center style="width: 595px; height:0px; !important"><a href="{{url_for('patienthome')}}" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">Home Page...</a>-->
+
+ </center>
+
+                </form>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-register-col-r">
+                <header class="mb-5">
+
+
+                </header>
+
+            </div>
+        </div>
+
+
+    <script src="{{url_for('static', filename='js/jquery-3.2.1.slim.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/materialize.min.js')}}" />
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>

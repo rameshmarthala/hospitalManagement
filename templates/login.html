@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cost-efficicent</title>
+	<!--
+    Template 2105 Input
+	http://www.tooplate.com/view/2105-input
+	-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/materialize.min.css">
+    <link rel="stylesheet" href="static/css/tooplate.css">
+       <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+ <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
+ <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
+</head>
+
+<body id="login">
+<center><h2>Enhancing the Data Security in Cloud using <span style="color:yellow">Block Chain </span></h2>
+</center>
+    <div class="container" style="height: 1012px;">
+  <center style="width: 1395px; height:0px; !important"> <a href="{{url_for('patient')}}" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">Create New Account</a>
+                   </center>
+         <center style="
+    width: 238px;
+">	<div class="col-md-8">
+
+		{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+				{% for category, message in messages %}
+				<b><h6><div class="alert alert-{{ category }}">
+						{{ message }}{{msg}}
+					</div></h6></b>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+
+		{% block content %} {% endblock %}
+
+     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ml-auto mr-0 text-center">
+          <center style="width: 225px;">
+               <a href="{{url_for('index')}}" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">Home Page</a>
+          </center>
+
+      </center>
+        <div class="row tm-register-row tm-mb-35">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-login-l">
+                <form action="{{url_for('loginback')}}" method="post" class="tm-bg-black p-5 h-100">
+                    <div class="input-field">
+                        <input placeholder="Email ID" id="username" name="email" type="text" class="validate">
+                    </div>
+                    <div class="input-field mb-5">
+                        <input placeholder="Password" id="password" name="pwd" type="password" class="validate">
+                    </div>
+                    <div class="tm-flex-lr">
+<!--                        <a href="#" class="white-text small">Forgot Password?</a>-->
+                        <button type="submit" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">Login</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-login-r">
+                <header class="font-weight-light tm-bg-black p-5 h-100">
+                    <h4 style="color:yellow" class="mt-0 text-white font-weight-light">Patient Login Form</h4>
+                    <p style="background-image: url('static/img/p1.jpg'); background-size: cover; height: 350px; "></p>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ml-auto mr-0 text-center">
+         </div>
+        </div>
+
+    </div>
+
+    <script src="static/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="static/js/materialize.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>
